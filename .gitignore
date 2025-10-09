@@ -1,0 +1,39 @@
+# Visual Studio user-specific files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Tt]emp/
+[Tt]mp/
+
+# IIS / publish
+.publish/
+.deploy/
+*.pubxml
+*.publishsettings
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+# The packages folder can be restored via NuGet
+!**/packages/build/
+
+# others
+*.cache
+*.dbmdl
+*.bak
+*.log
+*.DS_Store
+Thumbs.db
+
+# node, front-end assets (if any)
+node_modules/
+wwwroot/lib/

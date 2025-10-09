@@ -1,0 +1,36 @@
+﻿@page
+@model DreamflowLabs.Pages.ContactModel
+@{
+	ViewData["Title"] = "Contact Us - Dreamflow Labs";
+}
+
+<section class="container py-5 section">
+	<h2>@ViewData["Title"]</h2>
+	<p>We’d love to hear from you! Fill out the form below and we’ll be in touch soon.</p>
+
+	<form method="post" class="mt-4">
+		<div class="mb-3">
+			<label for="Name" class="form-label">Name</label>
+			<input asp-for="Name" class="form-control" id="Name" required />
+		</div>
+
+		<div class="mb-3">
+			<label for="Email" class="form-label">Email</label>
+			<input asp-for="Email" class="form-control" id="Email" type="email" required />
+		</div>
+
+		<div class="mb-3">
+			<label for="Message" class="form-label">Message</label>
+			<textarea asp-for="Message" class="form-control" id="Message" rows="4"></textarea>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Send</button>
+
+		@if (Model.Submitted)
+		{
+			<div class="alert alert-success mt-3">
+				Thanks, @Model.Name! Your message has been received.
+			</div>
+		}
+	</form>
+</section>
