@@ -5,12 +5,78 @@
 }
 
 <section class="hero-section text-center d-flex flex-column align-items-center justify-content-center">
-	<div class="logo-container shadow-layer">
-		<img src="~/images/dreamflow-logo.png" alt="Dreamflow Labs Logo" class="hero-logo" />
-	</div>
 
-	<h1 class="fw-bold mt-4">Welcome to Dreamflow Labs</h1>
-	<p class="lead text-muted">Stories That Dream With You</p>
+	<!-- Hero Video -->
+	<video id="heroVideo" autoplay muted loop playsinline
+		   poster="~/images/video-thumbnail.jpg"
+		   class="hero-video shadow-lg rounded-4">
+		<source src="~/media/dreamflow-promo.mp4" type="video/mp4" />
+		Your browser does not support the video tag.
+	</video>
 
-	<a class="btn btn-primary btn-lg mt-3" href="/Product">Explore Dreamflow AI</a>
+	<!-- Unmute Button -->
+	<button id="unmuteBtn" class="btn btn-gradient btn-unmute shadow-sm mt-3">
+		🔊 Enable Sound
+	</button>
+
+	<h1 class="fw-bold mt-5 display-5 text-gradient">Welcome to Dreamflow Labs</h1>
+	<p class="lead text-muted mb-4">Stories That Dream With You</p>
+	<a class="btn btn-gradient btn-lg px-4 py-3 shadow-sm" href="/Product">Explore Dreamflow AI</a>
 </section>
+
+
+@section Scripts {
+	<script>
+		// Client-side logic to unmute and continue playback
+		document.getElementById("unmuteBtn").addEventListener("click", function () {
+			const vid = document.getElementById("heroVideo");
+			// Unmute and play
+			vid.muted = false;
+			vid.play().catch(err => console.error("Playback failed:", err));
+
+			// Optionally hide the button once sound is enabled
+			this.style.display = "none";
+		});
+	</script>
+}
+
+<style>
+	.hero-section {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(180deg, #f8fbff 0%, #eaefff 100%);
+		padding: 5rem 1rem;
+	}
+
+	.hero-video {
+		width: 90%;
+		height: 70vh;
+		object-fit: cover;
+		border-radius: 1rem;
+		box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+	}
+
+	.btn-gradient {
+		background: linear-gradient(90deg, #5b8df7, #8c76ff);
+		color: #fff;
+		font-weight: 500;
+		border: none;
+		border-radius: 50px;
+		transition: all 0.25s ease;
+	}
+
+		.btn-gradient:hover {
+			background: linear-gradient(90deg, #4b7ae3, #7a5ff0);
+			color: #fff;
+			transform: translateY(-2px);
+		}
+
+	.btn-unmute {
+		position: relative;
+		z-index: 2;
+		margin-top: 1rem;
+	}
+</style>
