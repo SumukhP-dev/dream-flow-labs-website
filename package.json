@@ -1,0 +1,18 @@
+{
+  "name": "dreamflow-labs-website",
+  "version": "1.0.0",
+  "description": "DreamFlow Labs website built with ASP.NET Core",
+  "scripts": {
+    "build": "dotnet publish -c Release -o ./publish",
+    "build:azure": "dotnet publish -c Release -o ./publish"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SumukhP-dev/Dream_Flow_Labs_Website.git"
+  },
+  "author": "DreamFlow Labs",
+  "license": "MIT"
+}
