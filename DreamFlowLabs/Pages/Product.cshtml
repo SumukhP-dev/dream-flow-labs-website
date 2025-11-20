@@ -1,48 +1,45 @@
 ﻿@page "/DreamflowAI"
 @model DreamflowLabs.Pages.ProductModel
 @{
-	ViewData["Title"] = "Dreamflow AI — Moshi meets Sora";
+    ViewData["Title"] = "Dreamflow AI — Calm Companion";
 }
 
-<section class="container py-4 section">
-	<div class="text-center mb-5">
-		<h1 class="display-5 fw-bold">Dreamflow AI</h1>
-		<p class="lead"><em>Moshi meets Sora</em></p>
-		<p>
-			Personalized calming video stories that evolve nightly — crafted by AI to bring peace, imagination, and rest.
-		</p>
-	</div>
+<section class="container py-5 section">
+  <div class="text-center mb-5">
+    <h1 class="display-5 fw-bold">Dreamflow AI</h1>
+    <p class="lead"><em>Your nightly calm studio.</em></p>
+    <p>
+      Personalized bedtime and focus journeys that evolve with your routines,
+      moods, and family rituals. No editing, no stress—press play and unwind.
+    </p>
+    <a class="btn btn-primary btn-lg" href="/Signup?mode=serenity">Start your first ritual</a>
+  </div>
 
-	<section class="mb-4">
-		<h4>✨ What Is Dreamflow AI?</h4>
-		<p>
-			Dreamflow AI is an intelligent storytelling platform that creates custom
-			bedtime and relaxation journeys. Each evening, our AI designs a fresh,
-			soothing video story built around your mood, preferences, and daily rhythm.
-		</p>
-	</section>
+  <section class="row g-4 mb-5">
+    <article class="col-lg-4">
+      <h4>✨ Adaptive Storyworlds</h4>
+      <p>Each evening, Dreamflow weaves new characters, scenery, and narration around your mood and bedtime habits.</p>
+    </article>
+    <article class="col-lg-4">
+      <h4>🛡️ Kid-Safe Guardrails</h4>
+      <p>Built-in COPPA-friendly filters, parental PIN controls, and gentle tone enforcement keep every session soothing.</p>
+    </article>
+    <article class="col-lg-4">
+      <h4>📱 Rituals On Any Device</h4>
+      <p>Stream on phone, tablet, smart display, or cast to the TV. Download audio for offline nights or travel.</p>
+    </article>
+  </section>
 
-	<section class="mb-4">
-		<h4>🧠 How It Works</h4>
-		<ul>
-			<li><strong>Personalized Storyworlds:</strong> Every user experiences unique characters, visuals, and soundscapes.</li>
-			<li><strong>Adaptive Nightly Updates:</strong> Stories grow and change nightly based on your interactions and feedback.</li>
-			<li><strong>Emotional Intelligence:</strong> Our models tune tone, pacing, and ambiance for relaxation and focus.</li>
-			<li><strong>Seamless Access:</strong> Stream on any device — phone, tablet, or smart display — whenever you’re ready to unwind.</li>
-		</ul>
-	</section>
+  <section class="mb-4">
+    <h4>How it works</h4>
+    <ol>
+      <li>Choose tonight’s vibe (calm focus, cozy family, solo unwind).</li>
+      <li>Dreamflow generates a story + soundtrack + visual loop.</li>
+      <li>Save favorites, track streaks, and sync reminders to your bedtime.</li>
+    </ol>
+  </section>
 
-	<section class="mb-5">
-		<h4>🌙 Why Users Love It</h4>
-		<p>
-			Dreamflow AI blends storytelling, audio‑visual art, and artificial intelligence
-			to deliver moments of serenity that feel alive —
-			evolving as you do. By combining imagination with intelligent personalization,
-			“Moshi meets Sora” becomes more than a tagline — it’s the feeling of calm that learns with you.
-		</p>
-	</section>
-
-	<div class="text-center">
-		<a class="btn btn-primary btn-lg" href="/Contact">Join the Early Access List</a>
-	</div>
+  <div class="text-center mt-5">
+    <a class="btn btn-outline-light btn-lg" href="/Contact">Book a Serenity demo</a>
+  </div>
 </section>
