@@ -27,13 +27,13 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish DreamFlowLabs/DreamFlowLabs.csproj -c Release -o ./publish
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
+          path: ./publish
 
   deploy:
     runs-on: ubuntu-latest
@@ -51,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F4CBA062B46B47A99D9B53A8804E8094 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_E5E34A9BA1BD4699A9FBC0165811883D }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_FC386A959A0F43CD97F6C1751D708502 }}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -61,5 +61,5 @@ jobs:
         with:
           app-name: 'dreamflow-ai'
           slot-name: 'Production'
-          package: .
+          package: ./publish
           
