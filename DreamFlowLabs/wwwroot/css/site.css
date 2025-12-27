@@ -73,9 +73,9 @@
 
 /* Logo size inside navbar */
 .nav-logo {
-    height: 50px;
+    height: 70px;
     width: auto;
-    max-width: 200px;
+    max-width: 300px;
 }
 
 /* Optional drop shadow when scrolling */
