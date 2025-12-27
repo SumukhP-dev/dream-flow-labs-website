@@ -47,6 +47,8 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     transition: background 0.3s ease, box-shadow 0.3s ease;
+    min-height: 100px;
+    padding: 10px 0;
 }
 
 /* Slight text and hover enhancements */
@@ -73,9 +75,9 @@
 
 /* Logo size inside navbar */
 .nav-logo {
-    height: 70px;
+    height: 120px;
     width: auto;
-    max-width: 300px;
+    max-width: 400px;
 }
 
 /* Optional drop shadow when scrolling */
